@@ -8,18 +8,18 @@
 ·先设置一个CPU对象，用public方法,int类型定义speed,String定义type。
 public class CPU {
 	private int speed;
-	private String type;
+	private String brand;
 	public int getSpeed() {
 		return speed;
 	}
-	public Sting getType() {
-		return type;
+	public Sting getBrand() {
+		return brand;
 	}
 	public void setSpeed(int speed) {
 		this.speed = speed;
 	}
-	public void setType(String type) {
-		this.type = type;
+	public void setBrand(String brand) {
+		this.brand = brand;
 	}
 
 }
@@ -50,16 +50,16 @@ public class PC {
 		// TODO Auto-generated method stub
 		System.out.println("CPU Speed:"+cpu.getSpeed());
 		System.out.println("Hard Disk:"+disk.getAmount());
-		System.out.println("CPU Type:"+cpu.getType());
+		System.out.println("CPU Brand:"+cpu.getBrand());
 	}
 
 }
-·设置Test主类，实例化cpu、disk、pc，给cpu的speed赋值和amount赋值。
+·设置Test主类，实例化cpu、disk、pc，给cpu的speed、brand、amount赋值。
 public class Test {
 	public static void main(String[] args) {
 		CPU cpu = new CPU();
 		cpu.setSpeed(2200);
-		cpu.setType(Inter);
+		cpu.setBrand(Inter);
 		HardDisk disk = new HardDisk();
 		disk.setAmount(200);
 		PC pc = new PC();
@@ -72,7 +72,7 @@ public class Test {
 # 4.实验结果
 CPU Speed:2200
 Hard Disk:200
-CPU Type:Inter
+CPU Brand:Inter
 # 5.实验感想
   1.本次实验让我熟练构造方法，创建对象，方法的调用
   2.public和private的不同
