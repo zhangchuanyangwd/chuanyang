@@ -5,15 +5,21 @@
 ·附加要求：
 类中定义不少于两个构造方法。每个类定义不少于2个属性，且属性的类型应该多样化；根据课堂中关于访问权限的内容，尝试定义属性的修饰符多样化，类中定义方法操作属性，避免直接通过“类对象.属性”的形式访问属性值；且定义的方法内应该有符合常理的逻辑判断；尝试把本次实验的多个类放置在不同的包中，体会修饰符private的用法。
 # 2.实验方法
-·先设置一个CPU对象，用public方法,int类型定义speed
+·先设置一个CPU对象，用public方法,int类型定义speed,String定义type。
 public class CPU {
 	private int speed;
-	
+	private String type;
 	public int getSpeed() {
 		return speed;
 	}
+	public Sting getType() {
+		return type;
+	}
 	public void setSpeed(int speed) {
 		this.speed = speed;
+	}
+	public void setType(String type) {
+		this.type = type;
 	}
 
 }
@@ -44,6 +50,7 @@ public class PC {
 		// TODO Auto-generated method stub
 		System.out.println("CPU Speed:"+cpu.getSpeed());
 		System.out.println("Hard Disk:"+disk.getAmount());
+		System.out.println("CPU Type:"+cpu.getType());
 	}
 
 }
@@ -52,6 +59,7 @@ public class Test {
 	public static void main(String[] args) {
 		CPU cpu = new CPU();
 		cpu.setSpeed(2200);
+		cpu.setType(Inter);
 		HardDisk disk = new HardDisk();
 		disk.setAmount(200);
 		PC pc = new PC();
@@ -59,12 +67,12 @@ public class Test {
 		pc.setDisk(disk);
 		pc.show();
 	}
-	
 
 }
 # 4.实验结果
 CPU Speed:2200
 Hard Disk:200
+CPU Type:Inter
 # 5.实验感想
   1.本次实验让我熟练构造方法，创建对象，方法的调用
   2.public和private的不同
